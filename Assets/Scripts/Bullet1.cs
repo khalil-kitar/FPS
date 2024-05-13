@@ -11,7 +11,12 @@ public class Bullet1 : MonoBehaviour
         if (collision.gameObject.CompareTag("Target"))
         {
             print("Hit"+ collision.gameObject.name +"Target!");
-            //Destroy(gameObject);  // Détruit l'objet auquel ce script est attaché
+            Destroy(gameObject);  // Détruit l'objet auquel ce script est attaché
+        }
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            print("Hit a wall");
+            Destroy(gameObject);  // Détruit l'objet auquel ce script est attaché
         }
     }
 }
